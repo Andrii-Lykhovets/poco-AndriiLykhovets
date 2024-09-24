@@ -61,6 +61,7 @@ compare_numbers_function(number_1, number_2):
 3. Call the function
 compare_numbers_function(a, b)
 
+
 Ex. 3.1.5 (*) - Combine
 Combine Ex. 3.1.2 and 3.1.4 into one program.
 The program should ask the user if they want to add or subtract two numbers. Then the program should ask
@@ -70,8 +71,8 @@ for the two numbers and print the result.
 action = input("Do you want to add or subtract two numbers?")
 
 2. Introduce more variables
-a = input("Input the 1st number")
-b = input("Input the 2nd number")
+a = int(input("Input the 1st number"))
+b = int(input("Input the 2nd number"))
 
 3. Define a function
 perform_action_function(number_1, number_2):
@@ -104,6 +105,63 @@ for multiple in numbers:
         print("Buzz")
     elif multiple % 3 and 5 == 0:
         print("FizzBuzz")
+
+
+Ex. 3.2.2 (**) ca. 45 min
+Write a program that asks the user for a date. Find the day of the year for the given date. For example,
+January 1st would be 1, and December 31st is 365.
+a) Do not include leap years.
+b) Include leap years. Check the rules for leap years on the internet, and implement them in your program.
+
+B: 0. Check if the year is a leap one or not:
+-without leap year function:
+    total_days = (sum of the days in the array until that month) + day
+    return total_days
+
+-Is it a leap year function
+    if (year % 4 == 0 and year % 100 != 0) OR (year % 400 == 0):
+        return True
+    return False
+
+A:
+1. Use a data structure (e.g. a list) to store number of month days
+days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+2. Ask the user to input the date separately through variables
+    year = int(input(YYYY))
+    month = int(input(MM))
+    day = int(input(DD))
+
+3. all the days of months + current day - to count what number the day is
+Loop the list based on the month and sum the days of previous months + input the day
+for each month of the year in the list:
+    if input month == *month*:
+        days_before = slice the list up to that *month* and sum number of days up
+        day_number = days_before + day from input
+        print day_number
+    elif *all the same for the rest 11 months*
+
+
+
+
+3.3 Advanced Exercises
+
+Ex. 3.3.1 (***) - Sorting algorithms
+Write a sort algorithm yourself. (e.g. bubble sort)
+
+range_stop = 5
+print('bubble sort loop')
+for i in range(range_stop - 1):
+    for j in range(0, range_stop - i - 1):
+        print(f'i = {i}, j = {j}')
+
+1. introduce the array (e.g. a list)
+[1, 4, 2, 3, 5]
+
+2. iterate through the list by comparing 2
+
+
+
 
 
 
