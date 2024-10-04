@@ -21,5 +21,25 @@ const student = {
     courses: [{
         courseName: 'ForeignPolicy',
         grade: 85,
+    }, {
+        courseName: 'English',
+        grade: 95,
+    }, {
+        courseName: 'Geopolitics',
+        grade: 78,
+    }, {
+        courseName: 'Japanese',
+        grade: 99,
     }]
 }
+
+function logStudentGrades(student) { 
+    console.log(`${student.name}`)    
+    for (let i = 0; i < student.courses.length; i++) {
+        courseAccess = student.courses[i]
+        console.log(`${courseAccess.courseName} ${courseAccess.grade}`)
+    }
+}
+
+
+logStudentGrades(student)
